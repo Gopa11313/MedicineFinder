@@ -97,13 +97,12 @@ class MapsFragment : Fragment(){
     private fun getLocationAccess() {
         if (context?.let { ContextCompat.checkSelfPermission(it, android.Manifest.permission.ACCESS_FINE_LOCATION) } == PackageManager.PERMISSION_GRANTED) {
             map.isMyLocationEnabled = true
-            latitude = map.getMyLocation().latitude;
-            longitude = map.getMyLocation().longitude;
+//            latitude = map.getMyLocation().latitude;
+//            longitude = map.getMyLocation().longitude;
         }
         else
             ActivityCompat.requestPermissions(context as Activity, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_PERMISSION_REQUEST)
     }
-
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
