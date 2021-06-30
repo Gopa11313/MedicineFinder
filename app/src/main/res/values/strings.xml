@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MedicineFinder</string>
+    <string name="title_search">Search</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_map">Map</string>
+    <string name="title_bookmark">bookmark</string>
+</resources>
