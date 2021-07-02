@@ -3,5 +3,6 @@
     <string name="title_search">Search</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_map">Map</string>
+    <string name="Terms">By signing in, you agree to the <font color='#008000'>MedicineFinder terms and condition</font>.</string>
     <string name="title_bookmark">bookmark</string>
 </resources>
