@@ -28,6 +28,9 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var signup: Button
     private lateinit var sg_signin:Button
     private val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
+//    lateinit var fusedLocationProviderClient: FusedLocationProviderClient
+//    lateinit var locationRequest: LocationRequest
+//    val PERMISSION_ID = 1010
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
