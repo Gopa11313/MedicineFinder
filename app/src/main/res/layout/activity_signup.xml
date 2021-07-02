@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.signup.SignupActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MedicineFinder"
+        android:layout_marginTop="15dp"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        />
+    <FrameLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/orange"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:text="Create Account"
+            />
+        <EditText
+            android:id="@+id/sg_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:hint="Name"
+            android:paddingLeft="13dp"
+            android:background="@drawable/cornerborder"
+            />
+        <EditText
+            android:id="@+id/sg_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:hint="Email"
+            android:paddingLeft="13dp"
+            android:background="@drawable/cornerborder"
+            />
+        <EditText
+            android:id="@+id/sg_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:hint="Password"
+            android:paddingLeft="13dp"
+            android:background="@drawable/cornerborder"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="Passswords must be at least 6 characters."/>
+        <EditText
+            android:id="@+id/sg_con_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:hint="Con-Password"
+            android:paddingLeft="13dp"
+            android:background="@drawable/cornerborder"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="Passsword and con-password must be same"/>
+        <CheckBox
+            android:id="@+id/sg_showPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Password"
+            android:textSize="15dp"
+            android:layout_marginTop="15dp"
+            android:checked="false"/>
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create your Seller Account"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@color/orange"
+            android:layout_marginTop="25dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/Terms"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:layout_gravity="center"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="Already have an account?"
+            android:textSize="13dp" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:background="@color/orange"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_height="1dp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/sg_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:textSize="17dp"
+        android:background="@drawable/cornerborder"
+        android:text="sign-In now"/>
+
+    </LinearLayout>
+</LinearLayout>
