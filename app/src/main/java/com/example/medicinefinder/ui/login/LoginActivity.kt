@@ -6,13 +6,18 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import com.example.medicinefinder.R
 import com.example.medicinefinder.model.Seller
 import com.example.medicinefinder.repository.SellerRepository
+import com.example.medicinefinder.ui.DrawerActivity
 import com.example.medicinefinder.ui.signup.SignupActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.lang.Exception
 
 class LoginActivity : AppCompatActivity() {
     lateinit var editTextEmail:EditText
@@ -31,18 +36,32 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this,SignupActivity::class.java))
         }
         cirLoginButton.setOnClickListener(){
-
+login()
         }
 
     }
     fun login(){
         val seller=Seller(email = editTextEmail.text.toString(),password = editTextPassword.text.toString())
+        try {
         CoroutineScope(Dispatchers.IO).launch {
             val repository=SellerRepository()
             val response=repository.LoginUser(seller)
+            val res=response.success
             if(response.success==true){
-
+                withContext(Main){
+                    Toast.makeText(this@LoginActivity, "${response.msg}", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this@LoginActivity,DrawerActivity::class.java))
+                }
+            }
+            else{
+                withContext(Main){
+                    Toast.makeText(this@LoginActivity, "${response.msg}", Toast.LENGTH_SHORT).show()
+                }
             }
         }
+    }catch (e:Exception){
+            Toast.makeText(this, "$e", Toast.LENGTH_SHORT).show()
+    }
+
     }
 }
