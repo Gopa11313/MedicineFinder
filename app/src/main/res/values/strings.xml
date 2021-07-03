@@ -5,4 +5,13 @@
     <string name="title_map">Map</string>
     <string name="Terms">By signing in, you agree to the <font color='#008000'>MedicineFinder terms and condition</font>.</string>
     <string name="title_bookmark">bookmark</string>
+
+
+
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_Con_password_hint">Con-Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
 </resources>
