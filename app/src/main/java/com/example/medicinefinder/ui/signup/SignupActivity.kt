@@ -8,6 +8,7 @@ import android.os.Looper
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.example.medicinefinder.R
 import com.example.medicinefinder.SliderActivity
@@ -26,7 +27,7 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var sg_password:EditText
     private lateinit var sg_con_password:EditText
     private lateinit var signup: Button
-    private lateinit var sg_signin:Button
+    private lateinit var sg_signin:TextView
     private val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
 //    lateinit var fusedLocationProviderClient: FusedLocationProviderClient
 //    lateinit var locationRequest: LocationRequest
