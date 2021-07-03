@@ -13,4 +13,10 @@ class SellerRepository:MyApiRequest() {
         myapi.UserSignup(seller)
         }
     }
+
+    suspend fun LoginUser(seller: Seller):SellerResponse{
+        return apiRequest {
+            myapi.USerLogin(seller)
+        }
+    }
 }
