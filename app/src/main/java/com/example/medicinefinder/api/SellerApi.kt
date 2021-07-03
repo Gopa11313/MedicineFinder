@@ -8,5 +8,8 @@ import retrofit2.http.POST
 
 interface SellerApi {
     @POST("register/user")
-    suspend fun UserSignup(@Body sellerapi:Seller):Response<SellerResponse>
+    suspend fun UserSignup(@Body seller:Seller):Response<SellerResponse>
+
+    @POST("seller/login")
+    suspend fun USerLogin(@Body seller: Seller):Response<SellerResponse>
 }
