@@ -15,6 +15,7 @@ import com.example.medicinefinder.R
 import com.example.medicinefinder.adapter.dashboradIteamAdapter
 import com.example.medicinefinder.databinding.FragmentDashboardBinding
 import com.example.medicinefinder.model.DashBoradIteam
+import com.example.medicinefinder.ui.login.LoginActivity
 import com.example.medicinefinder.ui.signup.SignupActivity
 
 class DashboardFragment : Fragment() {
@@ -80,7 +81,7 @@ class DashboardFragment : Fragment() {
 //                    logout()
                 }
                 else if( selectedItemText==2){
-                    startActivity(Intent(context  ,SignupActivity::class.java))
+                    startActivity(Intent(context  ,LoginActivity::class.java))
                 }
             }
     }
