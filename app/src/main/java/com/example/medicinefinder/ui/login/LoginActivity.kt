@@ -52,6 +52,8 @@ login()
                     Toast.makeText(this@LoginActivity, "${response.msg}", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this@LoginActivity,DrawerActivity::class.java))
                     ServiceBuilder.id=response.id!!
+                    Toast.makeText(this@LoginActivity, "${response.id}", Toast.LENGTH_SHORT).show()
+                    ServiceBuilder.token="Brearer {${response.token}}"
                 }
             }
             else{

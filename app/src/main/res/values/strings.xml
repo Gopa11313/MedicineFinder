@@ -21,7 +21,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_logout">Logout</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
+    <string name="menu_drug">Drugs</string>
+    <string name="menu_upload_drug">Upload Drug</string>
     <string name="menu_slideshow">Slideshow</string>
 </resources>

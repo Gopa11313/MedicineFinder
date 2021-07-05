@@ -6,15 +6,15 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_drug"
         android:name="com.example.medicinefinder.ui.ui.home.DrugFragment"
-        android:label="@string/menu_home"
+        android:label="@string/menu_drug"
         tools:layout="@layout/fragment_drug" />
 
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.example.medicinefinder.ui.ui.uploaddrug.UploadDrugFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/menu_upload_drug"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment

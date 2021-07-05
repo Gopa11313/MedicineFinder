@@ -5,6 +5,6 @@ import com.example.medicinefinder.model.Drug
 data class DrugResponse(
     var success:Boolean?=null,
     var msg:String?=null,
-    var data:List<Drug>?=null
+    var data:MutableList<Drug>?=null
 ) {
 }

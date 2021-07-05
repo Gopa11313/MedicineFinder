@@ -14,4 +14,9 @@ class DrugRepository:MyApiRequest() {
             myapi.uploadDrug(drug)
         }
     }
+    suspend fun getAllDrug(token:String,id:String):DrugResponse{
+        return apiRequest {
+            myapi.getAllDrug(token,id)
+        }
+    }
 }
