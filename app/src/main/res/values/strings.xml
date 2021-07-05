@@ -24,4 +24,10 @@
     <string name="menu_drug">Drugs</string>
     <string name="menu_upload_drug">Upload Drug</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_user_dashboard">UserDashboardActivity</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="title_activity_user_dash">UserDashActivity</string>
 </resources>

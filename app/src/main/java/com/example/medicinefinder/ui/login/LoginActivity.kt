@@ -11,7 +11,6 @@ import com.example.medicinefinder.R
 import com.example.medicinefinder.api.ServiceBuilder
 import com.example.medicinefinder.model.Seller
 import com.example.medicinefinder.repository.SellerRepository
-import com.example.medicinefinder.ui.DrawerActivity
 import com.example.medicinefinder.ui.signup.SignupActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -50,7 +49,7 @@ login()
             if(response.success==true){
                 withContext(Main){
                     Toast.makeText(this@LoginActivity, "${response.msg}", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@LoginActivity,DrawerActivity::class.java))
+                    startActivity(Intent(this@LoginActivity,Us::class.java))
                     ServiceBuilder.id=response.id!!
                     Toast.makeText(this@LoginActivity, "${response.id}", Toast.LENGTH_SHORT).show()
                     ServiceBuilder.token="Brearer {${response.token}}"
