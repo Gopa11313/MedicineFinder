@@ -54,7 +54,7 @@ class SignupActivity : AppCompatActivity() {
         sg_signin=findViewById(R.id.sg_signin)
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
         signup.setOnClickListener(){
-            signup()
+
             Log.d("Debug:",CheckPermission().toString())
             Log.d("Debug:",isLocationEnabled().toString())
             RequestPermission()
@@ -62,6 +62,10 @@ class SignupActivity : AppCompatActivity() {
                  textView.text = location?.latitude.toString() + "," + location?.longitude.toString()
              }*/
             getLastLocation()
+            Handler(Looper.getMainLooper()).postDelayed({
+                signup()
+            }, 1000)
+
         }
     }
     fun signup(){
@@ -76,7 +80,7 @@ class SignupActivity : AppCompatActivity() {
                         Handler(Looper.getMainLooper()).postDelayed({
                             startActivity(Intent(this@SignupActivity,LoginActivity::class.java))
                             finish()
-                        }, 2000)
+                        }, 1000)
 
                     }
                 }
