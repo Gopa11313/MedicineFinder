@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.example.medicinefinder.R
+import com.example.medicinefinder.api.ServiceBuilder
 import com.example.medicinefinder.model.Seller
 import com.example.medicinefinder.repository.SellerRepository
 import com.example.medicinefinder.ui.DrawerActivity
@@ -46,11 +47,11 @@ login()
         CoroutineScope(Dispatchers.IO).launch {
             val repository=SellerRepository()
             val response=repository.LoginUser(seller)
-            val res=response.success
             if(response.success==true){
                 withContext(Main){
                     Toast.makeText(this@LoginActivity, "${response.msg}", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this@LoginActivity,DrawerActivity::class.java))
+                    ServiceBuilder.id=response.id!!
                 }
             }
             else{
@@ -64,4 +65,5 @@ login()
     }
 
     }
+
 }
