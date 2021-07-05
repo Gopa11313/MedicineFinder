@@ -37,6 +37,7 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var sg_con_password:EditText
     private lateinit var signup: Button
     private lateinit var sg_signin:TextView
+    private lateinit var storename:TextView
     private val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
     lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     lateinit var locationRequest: LocationRequest
@@ -52,6 +53,7 @@ class SignupActivity : AppCompatActivity() {
         sg_con_password=findViewById(R.id.sg_con_password)
         signup=findViewById(R.id.signup)
         sg_signin=findViewById(R.id.sg_signin)
+        storename=findViewById(R.id.storename)
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
         signup.setOnClickListener(){
 
@@ -70,7 +72,7 @@ class SignupActivity : AppCompatActivity() {
     }
     fun signup(){
         if(validation()) {
-            val seller = Seller(name = sg_name.text.toString(), email = sg_email.text.toString(), password = sg_password.text.toString(), latitude = latitude, longitude = longitude)
+            val seller = Seller(name = sg_name.text.toString(), email = sg_email.text.toString(), password = sg_password.text.toString(), latitude = latitude, longitude = longitude,storename= storename.text.toString())
             CoroutineScope(Dispatchers.IO).launch {
                 val sellerReposiroty = SellerRepository()
                 val response = sellerReposiroty.SignupUser(seller)
