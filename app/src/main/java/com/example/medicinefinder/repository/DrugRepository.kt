@@ -19,4 +19,9 @@ class DrugRepository:MyApiRequest() {
             myapi.getAllDrug(token,id)
         }
     }
+    suspend fun searchDrug(drug: Drug):DrugResponse{
+        return apiRequest {
+            myapi.SearchDrug(drug)
+        }
+    }
 }
