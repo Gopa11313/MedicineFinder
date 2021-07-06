@@ -13,4 +13,8 @@ suspend fun uploadDrug(@Body drug: Drug):Response<DrugResponse>
 suspend fun getAllDrug(
     @Header("Authorization")token:String,
     @Path("id") id:String ):Response<DrugResponse>
+
+
+@POST("search/drug")
+suspend fun SearchDrug(@Body drug:Drug):Response<DrugResponse>
 }
