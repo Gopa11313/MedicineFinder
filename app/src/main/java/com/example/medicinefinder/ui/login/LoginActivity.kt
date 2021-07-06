@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.example.medicinefinder.R
+import com.example.medicinefinder.UserActivity
 import com.example.medicinefinder.api.ServiceBuilder
 import com.example.medicinefinder.model.Seller
 import com.example.medicinefinder.repository.SellerRepository
@@ -48,11 +49,12 @@ login()
             val response=repository.LoginUser(seller)
             if(response.success==true){
                 withContext(Main){
-                    Toast.makeText(this@LoginActivity, "${response.msg}", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@LoginActivity,Us::class.java))
+//                    Toast.makeText(this@LoginActivity, "${response.msg}", Toast.LENGTH_SHORT).show()
+                    ServiceBuilder.token="Bearer ${response.token}"
                     ServiceBuilder.id=response.id!!
-                    Toast.makeText(this@LoginActivity, "${response.id}", Toast.LENGTH_SHORT).show()
-                    ServiceBuilder.token="Brearer {${response.token}}"
+                    startActivity(Intent(this@LoginActivity,UserActivity::class.java))
+                    Toast.makeText(this@LoginActivity, "${ServiceBuilder.token}", Toast.LENGTH_SHORT).show()
+
                 }
             }
             else{
