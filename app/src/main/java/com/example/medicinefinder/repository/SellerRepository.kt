@@ -19,4 +19,9 @@ class SellerRepository:MyApiRequest() {
             myapi.USerLogin(seller)
         }
     }
+    suspend fun getSeller(id:String):SellerResponse{
+        return apiRequest {
+            myapi.getUSer(id)
+        }
+    }
 }

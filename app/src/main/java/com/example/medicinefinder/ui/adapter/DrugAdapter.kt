@@ -1,16 +1,19 @@
 package com.example.medicinefinder.ui.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.medicinefinder.R
-import com.example.medicinefinder.api.ServiceBuilder
 import com.example.medicinefinder.model.Drug
+import com.example.medicinefinder.ui.activitymap.GoogleMapsActivity
+import com.example.medicinefinder.ui.map.MapsFragment
+
 
 class DrugAdapter(
     val list_Of_Drug:ArrayList<Drug>,
@@ -37,9 +40,11 @@ class DrugAdapter(
         val drug=list_Of_Drug[position]
         holder.name.text=drug.name
         holder.prescrip_view.text=drug.prescription
-//        holder.deleteMadicine.setOnClickListener(){
-//
-//        }
+        holder.deleteMadicine.setOnClickListener(){
+            val intent=Intent(context,GoogleMapsActivity::class.java)
+            intent.putExtra("id",drug.SellerId)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

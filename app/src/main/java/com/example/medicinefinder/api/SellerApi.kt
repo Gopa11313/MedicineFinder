@@ -4,7 +4,9 @@ import com.example.medicinefinder.model.Seller
 import com.example.medicinefinder.response.SellerResponse
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Path
 
 interface SellerApi {
     @POST("register/user")
@@ -12,4 +14,7 @@ interface SellerApi {
 
     @POST("seller/login")
     suspend fun USerLogin(@Body seller: Seller):Response<SellerResponse>
+
+    @GET("Seller/by/{id}")
+    suspend fun getUSer(@Path("id") id:String):Response<SellerResponse>
 }

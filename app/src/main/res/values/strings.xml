@@ -31,4 +31,5 @@
     <string name="menu_gallery">Gallery</string>
     <string name="title_activity_user_dash">UserDashActivity</string>
     <string name="title_activity_user">UserActivity</string>
+    <string name="title_activity_google_maps">Map</string>
 </resources>
